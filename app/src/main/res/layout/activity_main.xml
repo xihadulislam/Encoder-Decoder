@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:adFendo="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90caf9"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:text="Type Here.."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextID"
+            android:padding="10dp"
+            android:lineSpacingExtra="4dp"
+            android:gravity="start"
+            android:background="@drawable/et_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            />
+
+        <LinearLayout
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/encodeId"
+                android:layout_marginEnd="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/bg2"
+                android:text="Encode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/decodeID"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/bg"
+                android:text="Decode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linID"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+
+            android:textIsSelectable="true"
+            android:id="@+id/showTextId"
+            android:layout_margin="2dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:padding="10dp"
+            android:background="@drawable/et_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shareID"
+                android:padding="10dp"
+                android:src="@drawable/ic_share_black_24dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <ImageView
+                android:id="@+id/copyId"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="30dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_content_copy_black_24dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.adfendo.sdk.ads.BannerAd
+        android:layout_marginBottom="10dp"
+        android:id="@+id/bannerAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        adFendo:adFendoAdSize="Medium"
+        adFendo:bannerBackgroundColor="@android:color/holo_orange_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+
